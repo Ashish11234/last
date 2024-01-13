@@ -7,7 +7,7 @@ pipeline {
            git 'https://github.com/Ashish11234/last.git'
             }
         }
-        stages("java"){
+        stage("java"){
             steps{
                 bat '''javac Hello.java
               java Hello'''
