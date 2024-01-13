@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git') {
+            steps {
+           git 'https://github.com/Ashish11234/last.git'
+            }
+        }
+        stages("java"){
+            steps{
+                bat '''javac Hello.java
+              java Hello'''
+            }
+        }
+    }
+}
